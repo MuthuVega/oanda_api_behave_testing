@@ -1,2 +1,5 @@
 .idea/
 plain.output
+*.pyc
+__pycache__
+__pycache__/
