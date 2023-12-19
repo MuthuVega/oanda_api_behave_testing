@@ -1,0 +1,16 @@
+[host]
+hostname = "api-fxpractice.oanda.com"
+streaming_hostname = "stream-fxpractice.oanda.com"
+port = 443
+ssl = true
+
+[token]
+token = "0703cc771a23abcc42779aa8636f5c32-8ed1ca83251b9d20074cfcd90472208e"
+
+[date]
+datetime_format = "UNIX"
+
+[accounts]
+accounts = ["101-004-27768358-001",
+            "101-004-27768358-002"]
+active_account = "101-004-27768358-002"
