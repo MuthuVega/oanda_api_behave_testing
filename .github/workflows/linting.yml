@@ -1,0 +1,15 @@
+name: Linting for python code
+
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
+
+jobs:
+  lint-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v4
+      - name: Run black for linting
+        uses: psf/black@stable
