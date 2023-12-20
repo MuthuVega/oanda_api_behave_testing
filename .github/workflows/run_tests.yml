@@ -20,3 +20,11 @@ jobs:
           echo "Another approach"
           export MUTHU_API_KEY=${{ secrets.OANDA_DEMO_API_KEY }}
           echo $MUTHU_API_KEY
+      - name: Checkout the code
+        uses: actions/checkout@v3
+      - name: Install python
+        run: python --version
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run the tests
+        run: behave -v -s
