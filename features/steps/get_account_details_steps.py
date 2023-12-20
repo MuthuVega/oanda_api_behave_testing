@@ -4,12 +4,12 @@ from behave import *
 from modules.utils import utils
 
 
-@given(u'the user has a valid API token')
+@given("the user has a valid API token")
 def step_impl(context):
     pass
 
 
-@when(u'the user calls the "{api_endpoint}" API endpoint')
+@when('the user calls the "{api_endpoint}" API endpoint')
 def step_impl(context, api_endpoint):
     print(f"The text is {api_endpoint}")
     api_end_point = utils.get_api_endpoint(context, api_endpoint=api_endpoint)
@@ -18,18 +18,18 @@ def step_impl(context, api_endpoint):
     context.response = response
 
 
-@then(u'the account details are returned')
+@then("the account details are returned")
 def step_impl(context):
     assert context.response.ok
     assert context.response.status_code == 200
     assert len(context.response.json()) > 0
 
 
-@given(u'account number is "{account_number}"')
+@given('account number is "{account_number}"')
 def step_impl(context, account_number):
     context.active_account = account_number
 
 
-@then(u'an error is returned with response code "{response_code}"')
+@then('an error is returned with response code "{response_code}"')
 def step_impl(context, response_code):
     assert context.response.status_code == int(response_code)

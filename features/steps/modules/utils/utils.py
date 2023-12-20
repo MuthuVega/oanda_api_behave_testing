@@ -7,7 +7,9 @@ from features.steps.modules.utils import api_endpoints
 
 # TODO: Move thee below to a config file later
 CAT_FACT_API = "https://catfact.ninja/fact"
-CONFIG_FILE = "/Users/muthupandianvadivelu/muthu/learn/oanda_api_behave_testing/config.toml"
+CONFIG_FILE = (
+    "/Users/muthupandianvadivelu/muthu/learn/oanda_api_behave_testing/config.toml"
+)
 
 
 def get_cat_fact():
@@ -29,7 +31,10 @@ def set_base_url(context):
 
 
 def set_headers(context):
-    headers = {"Content-Type": "application/json", "Authorization": f"Bearer {context.token}"}
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {context.token}",
+    }
     context.headers = headers
 
 
