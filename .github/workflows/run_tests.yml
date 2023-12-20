@@ -9,17 +9,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Setup API access token as env variable
-        env:
-          OANDA_DEMO_API_KEY: ${{ secrets.OANDA_DEMO_API_KEY }}
-        run: |
-          export OANDA_DEMO_API_KEY="$DEMO_API_KEY"
-          echo $OANDA_DEMO_API_KEY
-          echo "Hello"
-          echo $DEMO_API_KEY
-          echo "Another approach"
-          export MUTHU_API_KEY=${{ secrets.OANDA_DEMO_API_KEY }}
-          echo $MUTHU_API_KEY
       - name: Checkout the code
         uses: actions/checkout@v3
       - name: Install python

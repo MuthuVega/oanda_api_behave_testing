@@ -26,10 +26,6 @@ def load_config(context):
     context.port = config["host"]["port"]
     context.active_account = config["accounts"]["active_account"]
     context.token = os.environ.get("OANDA_DEMO_API_KEY")
-    print(f"API Token value is {context.token}")
-    print(f"MUTHU_API_KEY API Token value is {os.environ.get('MUTHU_API_KEY')}")
-    print(f"DEMO_API_KEY API Token value is {os.environ.get('DEMO_API_KEY')}")
-    print(f"OANDA_DEMO_API_KEY API Token value is {os.environ.get('OANDA_DEMO_API_KEY')}")
 
 
 def set_base_url(context):
