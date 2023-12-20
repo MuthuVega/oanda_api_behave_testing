@@ -24,6 +24,16 @@ OANDA_API_ENDPOINTS = {
         "type": "GET",
         "params": ["accountID", "transactionID"],
     },
+    "GET_ORDER_BOOK": {
+        "endpoint": "/v3/instruments/{instrument}/orderBook",
+        "type": "GET",
+        "params": ["instrument"],
+    },
+    "GET_POSITION_BOOK": {
+        "endpoint": "/v3/instruments/{instrument}/positionBook",
+        "type": "GET",
+        "params": ["instrument"],
+    },
 }
 
 

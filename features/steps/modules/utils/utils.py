@@ -60,7 +60,7 @@ def get_data(context, api_end_point):
 
 def build_api_endpoint(context):
     print(f"Action is {context.active_outline['Action']}")
-    api_details = api_endpoints.get_end_point_details(context.active_outline['Action'])
+    api_details = api_endpoints.get_end_point_details(context.active_outline["Action"])
     api_end_point = api_details["endpoint"]
     for row_heading in context.active_outline.headings:
         if row_heading.find("URL_Path_Param") != -1:
@@ -76,7 +76,9 @@ def build_api_endpoint(context):
 
 def assert_response_code(context):
     if context.active_outline["ResponseCode"] != "":
-        assert context.response.status_code == int(context.active_outline["ResponseCode"])
+        assert context.response.status_code == int(
+            context.active_outline["ResponseCode"]
+        )
 
 
 def assert_response(context):
