@@ -27,4 +27,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Run the tests
+        env:
+          OANDA_DEMO_API_KEY: ${{ secrets.OANDA_DEMO_API_KEY }}
         run: behave -v -s
