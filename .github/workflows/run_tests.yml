@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Setup API access token as env variable
         env:
-          DEMO_API_KEY: ${{ secrets.OANDA_DEMO_API_KEY }}
+          OANDA_DEMO_API_KEY: ${{ secrets.OANDA_DEMO_API_KEY }}
         run: |
           export OANDA_DEMO_API_KEY="$DEMO_API_KEY"
           echo $OANDA_DEMO_API_KEY
