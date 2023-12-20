@@ -3,3 +3,5 @@ plain.output
 *.pyc
 __pycache__
 __pycache__/
+
+features/steps/modules/utils/__pycache__/utils.cpython-39.pyc

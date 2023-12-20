@@ -49,4 +49,5 @@ def get_api_endpoint(context, api_endpoint):
 def get_data(context, api_end_point):
     response = requests.get(url=api_end_point, headers=context.headers)
     print(json.dumps(response.json(), indent=2))
+    print(f"Response code is {response.status_code}")
     return response

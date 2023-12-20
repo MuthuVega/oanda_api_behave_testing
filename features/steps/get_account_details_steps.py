@@ -24,3 +24,12 @@ def step_impl(context):
     assert context.response.status_code == 200
     assert len(context.response.json()) > 0
 
+
+@given(u'account number is "{account_number}"')
+def step_impl(context, account_number):
+    context.active_account = account_number
+
+
+@then(u'an error is returned with response code "{response_code}"')
+def step_impl(context, response_code):
+    assert context.response.status_code == int(response_code)
