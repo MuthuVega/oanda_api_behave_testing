@@ -13,5 +13,5 @@ jobs:
         env:
           DEMO_API_KEY: ${{ secrets.OANDA_DEMO_API_KEY }}
         run: |
-          export OANDA_DEMO_API_KEY=env.DEMO_API_KEY
+          export OANDA_DEMO_API_KEY="$DEMO_API_KEY"
           echo $OANDA_DEMO_API_KEY
