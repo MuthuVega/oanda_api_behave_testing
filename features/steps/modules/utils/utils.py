@@ -11,9 +11,8 @@ CAT_FACT_API = "https://catfact.ninja/fact"
 CONFIG_FILE = (
     "/Users/muthupandianvadivelu/muthu/learn/oanda_api_behave_testing/config.toml"
 )
-CONFIG_FILE = (
-    "./config.toml"
-)
+CONFIG_FILE = "./config.toml"
+
 
 def get_cat_fact():
     return requests.get(CAT_FACT_API).json()
@@ -27,6 +26,8 @@ def load_config(context):
     context.port = config["host"]["port"]
     context.active_account = config["accounts"]["active_account"]
     context.token = os.environ.get("OANDA_DEMO_API_KEY")
+    print(f"API Token value is {context.token}")
+    print(f"MUTHU API Token value is {os.environ.get('$MUTHU_API_KEY')}")
 
 
 def set_base_url(context):
