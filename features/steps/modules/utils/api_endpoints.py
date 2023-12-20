@@ -8,7 +8,11 @@ OANDA_API_ENDPOINTS = {
     "GET_ACCOUNT_SUMMARY": {"endpoint": "/v3/accounts/{accountID}/summary", "type": "GET", "params": ["accountID"]},
     "GET_ACCOUNT_INSTRUMENTS": {"endpoint": "/v3/accounts/{accountID}/instruments", "type": "GET",
                                 "params": ["accountID"]},
-    "GET_ACCOUNT_CHANGES": {"endpoint": "/v3/accounts/{accountID}/changes?sinceTransactionID={{transactionID}}", "type": "GET", "params": ["accountID", "transactionID"]},
+    "GET_ACCOUNT_CHANGES": {"endpoint": "/v3/accounts/{accountID}/changes?sinceTransactionID={{transactionID}}",
+                            "type": "GET", "params": ["accountID", "transactionID"]},
+    "GET_ORDER_BOOK": {"endpoint": "/v3/instruments/{instrument}/orderBook", "type": "GET", "params": ["instrument"]},
+    "GET_POSITION_BOOK": {"endpoint": "/v3/instruments/{instrument}/positionBook", "type": "GET",
+                          "params": ["instrument"]},
 }
 
 
