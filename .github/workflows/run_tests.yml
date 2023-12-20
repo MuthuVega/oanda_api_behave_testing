@@ -15,3 +15,8 @@ jobs:
         run: |
           export OANDA_DEMO_API_KEY="$DEMO_API_KEY"
           echo $OANDA_DEMO_API_KEY
+          echo "Hello"
+          echo $DEMO_API_KEY
+          echo "Another approach"
+          export MUTHU_API_KEY=${{ secrets.OANDA_DEMO_API_KEY }}
+          echo $MUTHU_API_KEY
