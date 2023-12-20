@@ -1,5 +1,6 @@
 import json
 import logging
+import os
 
 import requests
 import toml
@@ -10,6 +11,7 @@ CAT_FACT_API = "https://catfact.ninja/fact"
 CONFIG_FILE = (
     "/Users/muthupandianvadivelu/muthu/learn/oanda_api_behave_testing/config.toml"
 )
+CONFIG_FILE = "./config.toml"
 
 
 def get_cat_fact():
@@ -22,8 +24,8 @@ def load_config(context):
     logging.info(f"Config values are : {config}")
     context.hostname = config["host"]["hostname"]
     context.port = config["host"]["port"]
-    context.token = config["token"]["token"]
     context.active_account = config["accounts"]["active_account"]
+    context.token = os.environ.get("OANDA_DEMO_API_KEY")
 
 
 def set_base_url(context):
