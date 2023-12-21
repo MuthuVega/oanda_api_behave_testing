@@ -4,5 +4,5 @@ plain.output
 __pycache__
 __pycache__/
 reports/
-
+.env
 features/steps/modules/utils/__pycache__/utils.cpython-39.pyc
