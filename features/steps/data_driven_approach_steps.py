@@ -11,7 +11,13 @@ def step_impl(context):
 def step_impl(context):
     api_end_point = utils.build_api_endpoint(context)
     print(f"Fully qualified end point is {api_end_point}")
-    response = utils.get_data(context, api_end_point=api_end_point)
+    payload = utils.build_payload(context)
+    print(f"Payload is  {payload}")
+    response = utils.execute_action(
+        context, api_end_point=api_end_point, payload=payload
+    )
+    print(f"Response is {response.text}")
+    print(f"Response Code is {response.status_code}")
     context.response = response
 
 
