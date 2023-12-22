@@ -34,6 +34,28 @@ OANDA_API_ENDPOINTS = {
         "type": "GET",
         "params": ["instrument"],
     },
+    "SUBMIT_MARKET_ORDER": {
+        "endpoint": "/v3/accounts/{accountID}/orders",
+        "type": "POST",
+        "params": ["accountID"],
+        "payload_object": ["order"],
+    },
+    "SUBMIT_LIMIT_ORDER": {
+        "endpoint": "/v3/accounts/{accountID}/orders",
+        "type": "POST",
+        "params": ["accountID"],
+        "payload_object": ["order"],
+    },
+    "GET_ORDERS": {
+        "endpoint": "/v3/accounts/{accountID}/orders?instrument={{instrument}}",
+        "type": "GET",
+        "params": ["accountID"],
+    },
+    "GET_TRADES": {
+        "endpoint": "/v3/accounts/{accountID}/openTrades",
+        "type": "GET",
+        "params": ["accountID"],
+    },
 }
 
 
